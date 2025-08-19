@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<!--   <link rel="stylesheet" href="style.css">-->
+</head>
+<style>
+    body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+width: 50px;
+height: 50px;
+}
+
+button {
+font-size: 16px;
+padding: 10px;
+background-color:  #e74c3c;
+border-radius: 20px;
+color: white;
+}
+
+button:hover {
+background-color: #333;
+}
+
+</style>
+<body>
+
+    <div>
+   
+ <h1>Addition </h1>
+  <input type="number" id="fNumber" placeholder="First Number">
+  <input type="number" id="sNumber" placeholder="Second Number">
+  <button id="addBtn">Add</button>
+  <p>Result: <span id="group1Display"></span></p>
+
+
+
+ <h1>Subtraction</h1>
+  <input type="number" id="fNumber1" placeholder="First Number">
+  <input type="number" id="sNumber1" placeholder="Second Number">
+  <button id="subBtn">Subtract</button>
+  <p>Result: <span id="group2Display"></span></p>
+
+
+
+
+
+ <h1>Division</h1>
+  <input type="number" id="fNumber2" placeholder="First Number">
+  <input type="number" id="sNumber2" placeholder="Second Number">
+  <button id="dividedBtn">Divide</button>
+  <p>Result: <span id="group3Display"></span></p>
+
+
+
+
+
+
+ <h1>Multiplication </h1>
+  <input type="number" id="fNumber3" placeholder="First Number">
+  <input type="number" id="sNumber3" placeholder="Second Number">
+  <button id="mulBtn">multiply</button>
+  <p>Result: <span id="group4Display"></span></p>
+
+    </div>
+
+    <script>
+    
+
+
+const group1Display = document.getElementById('group1Display');
+
+function addAns(fNumber, sNumber) {
+  const result = parseFloat(fNumber) + parseFloat(sNumber);
+  group1Display.textContent = result;
+}
+
+document.getElementById('addBtn').addEventListener('click', function() {
+  const fNumber = document.getElementById('fNumber').value;
+  const sNumber = document.getElementById('sNumber').value;
+  addAns(fNumber, sNumber);
+});
+
+
+
+
+
+const group2Display = document.getElementById('group2Display');
+
+function subAns(fNumber1, sNumber1) {
+  const result1 = parseFloat(fNumber1) - parseFloat(sNumber1);
+  group2Display.textContent = result1;
+}
+
+document.getElementById('subBtn').addEventListener('click', function() {
+  const fNumber1 = document.getElementById('fNumber1').value;
+  const sNumber1 = document.getElementById('sNumber1').value;
+  subAns(fNumber1, sNumber1);
+});
+
+
+
+
+
+
+
+
+
+const group3Display = document.getElementById('group3Display');
+
+function dividedAns(fNumber2, sNumber2) {
+  const result2 = parseFloat(fNumber2) /parseFloat(sNumber2);
+  group3Display.textContent = result2;
+}
+
+document.getElementById('dividedBtn').addEventListener('click', function() {
+  const fNumber2 = document.getElementById('fNumber2').value;
+  const sNumber2 = document.getElementById('sNumber2').value;
+  dividedAns(fNumber2, sNumber2);
+});
+
+
+
+
+
+const group4Display = document.getElementById('group4Display');
+
+function mulAns(fNumber3, sNumber3) {
+  const result3 = parseFloat(fNumber3) * parseFloat(sNumber3);
+  group4Display.textContent = result3;
+}
+
+document.getElementById('mulBtn').addEventListener('click', function() {
+  const fNumber3 = document.getElementById('fNumber3').value;
+  const sNumber3 = document.getElementById('sNumber3').value;
+  mulAns(fNumber3, sNumber3);
+});
+
+</script>
+</body>
+</html>
